@@ -7,8 +7,17 @@ function App() {
     <br/>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sed earum veritatis, labore itaque esse.</p>
     <p>Author <span>{author}</span></p>
+    <Footer/>
   </div>
   );
 }
 
 export default App;
+
+function Footer(){
+  return(
+    <div>
+      <p>I am footer from a function</p>
+    </div>
+  )
+}
