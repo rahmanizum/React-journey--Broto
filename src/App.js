@@ -2,8 +2,14 @@
 
 
 function App() {
+  let author = "Mufil Rahman"
   return (
-<h1>Hellow world</h1>
+  <div>
+    <h1 style = {{color:'red'}}>my first application</h1>
+    <br/>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sed earum veritatis, labore itaque esse.</p>
+    <p>Author <span>{author}</span></p>
+  </div>
   );
 }
 
