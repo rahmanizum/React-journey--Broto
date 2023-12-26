@@ -5,7 +5,7 @@ function ClickButton({ onClick }) {
         <div className=''>
 
             <button onClick={onClick} type="button" className="btn btn-primary p-2">
-             Button 1
+             Incease 1
             </button>
         </div>
     )

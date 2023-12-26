@@ -3,7 +3,7 @@ import '../App.css'
 function Header(){
     return(
       <div>
-        <h1 className='heading'>Hello World</h1>
+        <h1 className='heading'>My first react project</h1>
       </div>
     )
   }
