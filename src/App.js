@@ -21,7 +21,7 @@ function App() {
       <button onClick={increaseCount2} className=' btn btn-primary p-2'> Increase 2</button>
       <h3 className='text-center' id='count'> count = {count}</h3>
 
-      <Form state={setCount}/>
+      <Form title = "Reset form" state={setCount}/>
     </div>
   )
 }
