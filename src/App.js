@@ -14,6 +14,10 @@ function App() {
   const increaseCount2 = ()=>{
     setCount(count+2)
   }
+  const obj = {
+    title:"Second Count",
+    count
+  }
   return (
     <div className='pt-3 text-center'>
       <Header/>
@@ -21,7 +25,7 @@ function App() {
       <br />
       <button onClick={increaseCount2} className=' btn btn-primary p-2'> Increase 2</button>
       <h3 className='text-center' id='count'> count = {count}</h3>
-      <Counter title="Counter 2" count={count}/>
+      <Counter {...obj}/>
       <Form title = "Reset form" state={setCount}/>
     </div>
   )
