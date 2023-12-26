@@ -1,11 +1,13 @@
-function Footer(props){
-    return(
-        <div>
-            <p>The author of this blog is {props.author}</p>
-        </div>
-    )
+import { Component } from "react";
+
+class Footer extends Component{
+    render(){
+        return(
+            <div className="footer">
+                <p>Created by: {this.props.author}</p>
+
+            </div>)
+    }
 }
-Footer.defaultProps ={
-    author:"Anonymous"
-}
+
 export default Footer;
