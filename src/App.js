@@ -1,21 +1,21 @@
-
 import Header from './components/Header'
-import Footer from './components/Footer'
-function App() {
-  let author = "Mufil Rahman"
-  return (
-  <div>
-    <Header />
-    <Footer author={author}/>
+import ClickButton from './components/Button'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-    <Header />
-    <Footer author = {"Surya Dev"}/>
-    
-    <br/>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sed earum veritatis, labore itaque esse.</p>
-    <p>Author <span>{author}</span></p>
-  </div>
-  );
+function App() {
+  let count = 0;
+  const increaseCount = ()=>{
+    console.log("clicked");
+  }
+  return (
+    <div className='pt-3 text-center'>
+      <Header/>
+      <ClickButton onClick={increaseCount} />
+      <br />
+      <button onClick={increaseCount} className=' btn btn-primary p-2'> Button 2</button>
+      <h3 className='text-center'> count = {count}</h3>
+    </div>
+  )
 }
 
 export default App;

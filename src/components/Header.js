@@ -1,9 +1,10 @@
+import '../App.css'
 
-import '../App'
-import {Component} from 'react';
-class Header extends Component{
-    render(){
-        return(<h1>Header as a class Component</h1>)
-    }
-}
+function Header(){
+    return(
+      <div>
+        <h1 className='heading'>Hello World</h1>
+      </div>
+    )
+  }
   export default Header;
