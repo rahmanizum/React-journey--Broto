@@ -9,7 +9,7 @@ function Form({title,state}) {
   return (
     <div>
       <form id='myForm'>
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <label className='form-label' htmlFor="reset">ResetVal</label><br />
         <input className='form-control' type="number" id="reset" name="reset" required/><br />
         <button onClick={resetVal} className='btn btn-success'>Submit</button>

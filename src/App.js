@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header'
 import ClickButton from './components/Button'
 import Form from './components/Form';
+import Counter from './components/Counter';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <br />
       <button onClick={increaseCount2} className=' btn btn-primary p-2'> Increase 2</button>
       <h3 className='text-center' id='count'> count = {count}</h3>
-
+      <Counter title="Counter 2" count={count}/>
       <Form title = "Reset form" state={setCount}/>
     </div>
   )
