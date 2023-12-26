@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header'
 import ClickButton from './components/Button'
+import Form from './components/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
       <ClickButton onClick={increaseCount1} />
       <br />
       <button onClick={increaseCount2} className=' btn btn-primary p-2'> Increase 2</button>
-      <h3 className='text-center'> count = {count}</h3>
+      <h3 className='text-center' id='count'> count = {count}</h3>
+
+      <Form state={setCount}/>
     </div>
   )
 }
