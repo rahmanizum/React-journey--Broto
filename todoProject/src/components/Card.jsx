@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({heading,details,date,time}) {
+function Card({id,heading,details,date,time,onClick ,onRemove}) {
   return (
     <li className="list-group-item mb-1">
     <div className="card bg-light">
@@ -11,8 +11,8 @@ function Card({heading,details,date,time}) {
       </div>
       <div className="card-footer">
         <div className="form-group text-center bg-light">
-          <button className="btn btn-success me-1">Done</button>
-          <button className="btn btn-danger ms-1">Later</button>
+          <button onClick={onClick} className="btn btn-success me-1" id={id}>Done</button>
+          <button onClick={onRemove} className="btn btn-danger ms-1" id={id}>Remove</button>
         </div>
       </div>
     </div>
