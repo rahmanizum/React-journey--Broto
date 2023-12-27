@@ -10,6 +10,7 @@ function Card({ name, image, bio }) {
       </div>
     </div>
   );
+
 }
 
 export default Card;

@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Card from './components/Card';
+
  function App() {
 let objArr = [{
   name: "John Doe",
@@ -9,14 +10,29 @@ let objArr = [{
   name: "Jane Smith",
   image:"2",
   bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ad culpa rem rerum aliquam tempora!"
+},
+{
+  name: "Mufil Rahman A",
+  image:"3",
+  bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ad culpa rem rerum aliquam tempora!"
 }]
+const [state,setState] = useState(true)
 
   return (
     <div className="text-center p-3">
       <h1>Hello World!</h1>
+      <div className='btn-group text-center pb-3'>
+            <button onClick = {()=>setState(!state)} className='btn btn-primary '> hide/show</button>
+            </div>
       <div className='d-flex justify-content-around'>
       {objArr.map((obj,index)=>{
-        return(<Card key = {index}{...obj}/>)
+        if(state){
+          return(
+            <Card  key={index}{...obj}/>
+            )
+        }else{
+          return null;
+        }
       })}
       </div>
     </div>
