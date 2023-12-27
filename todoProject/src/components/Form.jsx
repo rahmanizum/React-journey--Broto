@@ -1,20 +1,20 @@
 import React from 'react';
 
-function Form({onChange,onClick}) {
+function Form({onClick}) {
   return (
     <div>
-      <form>
+      <form onSubmit={onClick} id='myForm'>
         <div className="form-group text-bg-light rounded-3 p-2">
-            <label for="heading" class="form-label text-bg-light ">Enter your Task Name</label>
-            <input onChange={onChange} type="text" className="form-control" id="taskInput" placeholder="" required />
-            <label for="details" class="form-label text-bg-light ">Enter your Task Details</label>
-            <textarea name="details" className='form-control' id="" rows="4" required></textarea>
-            <label for="time" class="form-label text-bg-light ">Enter your deadline</label>
+            <label for="heading" className="form-label text-bg-light ">Enter your Task Name</label>
+            <input type="text" className="form-control" id="heading" placeholder="" required />
+            <label for="details" className="form-label text-bg-light mt-2 ">Enter your Task Details</label>
+            <textarea name="details" className='form-control' id="details" rows="4" required></textarea>
+            <label for="time" className="form-label text-bg-light mt-2">Enter your deadline</label>
             <div className='form-group d-flex'>
-            <input type="date" className="form-control rounded-0" id="date" />
-            <input type="time" className="form-control rounded-0" id="time" />
+            <input type="date" className="form-control rounded-0" id="date" required/>
+            <input type="time" className="form-control rounded-0" id="time" required/>
             </div>
-          <button onClick={onClick} className="btn btn-primary mt-3">Add</button>
+          <button className="btn btn-primary mt-3">Add</button>
         </div>
       </form>
     </div>
