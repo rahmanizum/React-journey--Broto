@@ -26,7 +26,7 @@ function App() {
       </div>
       <div className='d-flex justify-content-around'>
         {objArr.map((obj, index) => {
-          return state ? <Card key={index}{...obj} /> : null
+          return state && <Card key={index}{...obj} /> 
         })}
       </div>
     </div>
